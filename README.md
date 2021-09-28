@@ -27,6 +27,14 @@ place in the Square call and on the square.js
 -passed to square
 
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
+-tree emoji branch
+-on any given event tree appears on a certain index
+-since manipulatin board...do code outside state---const{board} makes a variable
+-destructured board out of state
+-updated value with emoji
+CTRL, CMMd, space bar for emoji
+setState ater manipulate
+(Done)
 - As a user, if I select the winning square the question mark will become a treasure emoji.
 - As a user, if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.

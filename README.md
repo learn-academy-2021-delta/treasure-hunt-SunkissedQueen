@@ -35,8 +35,18 @@ place in the Square call and on the square.js
 CTRL, CMMd, space bar for emoji
 setState ater manipulate
 (Done)
+
 - As a user, if I select the winning square the question mark will become a treasure emoji.
 - As a user, if I select the losing square the question mark will become a bomb emoji.
+-Making both into a single user story
+-branch: treasure-bomb
+-store the emojis first in the state
+treasureLoc: null,
+bombLoc: null
+create lifecycle method-----componentDidMount(){}
+set values to random numbers
+-Destructure to allow conditional statements
+
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.

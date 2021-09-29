@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
-class Square extends Component{
-  handleClick = () => {
-    this.props.handleGamePlay(this.props.index)
-  }
+class Count extends Component{
 
   render(){
     return(
@@ -15,4 +12,4 @@ class Square extends Component{
     )
   }
 }
-export default Square
+export default Count

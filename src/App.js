@@ -8,7 +8,8 @@ class App extends Component{
     this.state = {
       board: ["?", "?", "?", "?", "?", "?", "?", "?", "?"],
       treasureLoc: null,
-      bombLoc: null
+      bombLoc: null,
+      guess: 5
     }
   }
 
@@ -28,9 +29,10 @@ componentDidMount(){
       board[index] = "💣"
       this.setState({board: board})
     } else {
-    //index is the parameter
-    board[index] = "🌴"
-    this.setState({board: board})}
+        let newGuess = this.state.guess - 1
+        //index is the parameter
+        board[index] = "🌴"
+        this.setState({board: board, guess: newGuess})}
   }
 
   render(){
@@ -50,6 +52,7 @@ componentDidMount(){
             )
         })}
       </div>
+      <h2>Guesses Left: {this.state.guess} </h2>
       </>
     )
   }

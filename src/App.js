@@ -21,18 +21,25 @@ componentDidMount(){
 
   handleGamePlay= (index) => {
     //destructuring
-    const {board, treasureLoc, bombLoc} = this.state
-    if(treasureLoc===index){
+    const {board, treasureLoc, bombLoc, guess} = this.state
+    let newGuess = this.state.guess - 1
+    this.setState({guess: newGuess})
+    if(guess === 1 && treasureLoc !== index && bombLoc !== index){
+      board[index] = "🙅🏾‍♀️"
+      this.setState({board: board})
+      setTimeout(() => {alert ("Dirty barnacles, you ran out of turns. You lost this game.")}, 100)
+    } else if (treasureLoc===index){
       board[index] = "💍"
       this.setState({board: board})
+      setTimeout(() => {alert ("Will you take this treasure? You won the game!!!")}, 100) //window.location.reload(false), 6000)
     } else if (bombLoc===index){
       board[index] = "💣"
       this.setState({board: board})
+      setTimeout(() => {alert ("You the bomb...in a bad way. You lost this game!!!")}, 100) //window.location.reload(false), 6000)
     } else {
-        let newGuess = this.state.guess - 1
         //index is the parameter
         board[index] = "🌴"
-        this.setState({board: board, guess: newGuess})}
+        this.setState({board: board})}
   }
 
   render(){

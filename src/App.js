@@ -27,11 +27,11 @@ componentDidMount(){
     if(guess === 1 && treasureLoc !== index && bombLoc !== index){
       board[index] = "🙅🏾‍♀️"
       this.setState({board: board})
-      setTimeout(() => {alert ("Dirty barnacles, you ran out of turns. You lost this game.")}, 100)
+       setTimeout(() => {alert ("Dirty barnacles, you ran out of turns. You lost this game.")}, 100)
     } else if (treasureLoc===index){
       board[index] = "💍"
       this.setState({board: board})
-      setTimeout(() => {alert ("Will you take this treasure? You won the game!!!")}, 100) //window.location.reload(false), 6000)
+      setTimeout(() => {alert ("Will you take this treasure? You won the game!!!")}, 100) (window.location.reload(true), 6000)
     } else if (bombLoc===index){
       board[index] = "💣"
       this.setState({board: board})
